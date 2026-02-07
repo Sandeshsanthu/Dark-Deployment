@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+unleash-client
+prometheus-client
+UnleashClient

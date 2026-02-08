@@ -1,5 +1,5 @@
-from UnleashClient import UnleashClient
 import os
+from unleash import UnleashClient
 
 client = UnleashClient(
     url=os.getenv("UNLEASH_URL"),

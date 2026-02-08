@@ -3,3 +3,4 @@ uvicorn
 unleash-client
 prometheus-client
 UnleashClient
+gunicorn

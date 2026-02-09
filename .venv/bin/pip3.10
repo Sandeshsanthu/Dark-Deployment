@@ -1,4 +1,4 @@
-#!/home/sandeshs/Dark-Deployment/.venv/bin/python3
+#!/home/sandeshs/Dark-Deployment/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

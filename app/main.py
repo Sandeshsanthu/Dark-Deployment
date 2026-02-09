@@ -1,11 +1,20 @@
 from fastapi import FastAPI
+#from model_v1 import predict as v1_predict
+#from model_v2 import predict as v2_predict
 from model_v1 import predict as v1_predict
 from model_v2 import predict as v2_predict
-from feature_flag import is_enabled
+from feature_flag import is_enabled, init_unleash, shutdown_unleash
 from metrics import REQUEST_COUNT, PREDICTION_LATENCY
 import time
 
 app = FastAPI()
+@app.on_event("startup")
+def _startup():
+    init_unleash()
+
+@app.on_event("shutdown")
+def _shutdown():
+    shutdown_unleash()
 
 @app.post("/predict")
 def predict(data: dict):
